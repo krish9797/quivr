@@ -21,9 +21,6 @@ import { Tab } from "@/lib/types/Tab";
 import BrainsList from "./BrainsList/BrainsList";
 import styles from "./page.module.scss";
 
-const projectName = process.env.NEXT_PUBLIC_PROJECT_NAME;
-
-
 const Search = (): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState("Models");
   const [isNewBrain, setIsNewBrain] = useState(false);
@@ -113,7 +110,7 @@ const Search = (): JSX.Element => {
             <QuivrLogo size={80} color={isDarkMode ? "white" : "black"} />
             <div className={styles.quivr_text}>
               <span>Talk to </span>
-              <span className={styles.quivr_text_primary}>{projectName ? projectName : "Quivr"}</span>
+              <span className={styles.quivr_text_primary}>Quivr</span>
             </div>
           </div>
           <div className={styles.search_bar_wrapper}>
